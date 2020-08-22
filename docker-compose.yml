@@ -2,6 +2,8 @@ version: '3.8'
 services:
   app:
     build: ./docker/php-fpm
+    environment:
+      - MYSQL_HOST=db
     depends_on:
       - db
     volumes:
