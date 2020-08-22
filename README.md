@@ -23,12 +23,6 @@ $ cp .env.example .env
 APP_BASE_DIR=../app
 ```
 
-`.env` 内の `APP_PUBLIC_DIR` をいい感じに指定します。
-以下は本フォルダの一つ上の階層にある `public` フォルダを指定する例。
-```shell
-APP_PUBLIC_DIR=../public
-```
-
 Docker コンテナをビルド・起動します。
 ```shell
 $ make up
