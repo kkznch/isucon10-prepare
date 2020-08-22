@@ -6,6 +6,8 @@ services:
       - db
     volumes:
       - ${APP_BASE_DIR}:/app:cached
+      - ${APP_PUBLIC_DIR}:/public:cached
+      - ./docker/php-fpm/tmp:/tmp:delegated
       - ./docker/php-fpm/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini:ro
     working_dir: /app
   web:
