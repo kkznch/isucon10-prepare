@@ -32,9 +32,9 @@ services:
   bench:
     image: golang:1.15
     volumes:
-      - ${APP_BASE_DIR}:/app:cached
+      - ${APP_BASE_DIR}:/app
     working_dir: /app
-    command: ["make"]
+    command: ["make", "clean", "all"]
 
 volumes:
   db-volume:
