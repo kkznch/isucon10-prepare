@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   app:
-    image: php:7.4-fpm-alpine
+    build: ./docker/php-fpm
     depends_on:
       - db
     volumes:
