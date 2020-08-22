@@ -29,6 +29,12 @@ services:
       - db-volume:/var/lib/mysql
       - ./docker/mysql/logs:/var/log/mysql:delegated
       - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf:ro
+  bench:
+    image: golang:1.15
+    volumes:
+      - ${APP_BASE_DIR}:/app:cached
+    working_dir: /app
+    command: ["make"]
 
 volumes:
   db-volume:
