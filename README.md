@@ -12,12 +12,15 @@ $ git clone git@gitlab.com:re_build/isucon10-prepare
 $ cd isucon10-prepare
 ```
 
-ISUCON用のソースをcloneしてきます。
-git clone とか使って本フォルダ直下に src と命名して設置します。
-
 Docker Compose 用の `.env` をコピーします。
 ```shell
 $ cp .env.example .env
+```
+
+`.env` 内の `APP_BASE_DIR` をいい感じに指定します。
+以下は本フォルダの一つ上の階層にある `app` フォルダを指定する例。
+```shell
+APP_BASE_DIR=../app
 ```
 
 Docker コンテナをビルド・起動します。
