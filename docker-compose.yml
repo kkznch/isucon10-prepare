@@ -2,7 +2,7 @@ version: '3.8'
 services:
   app:
     build:
-      dockerfile: ./docker/php-fpm
+      context: ./docker/php-fpm
       args:
         - NEW_RELIC_AGENT_VERSION=${NEW_RELIC_AGENT_VERSION}
         - NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY}
