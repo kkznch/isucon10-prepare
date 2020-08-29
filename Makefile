@@ -1,5 +1,5 @@
 up:
-	docker-compose up -d app web db bench-build
+	docker-compose up -d app web db bench-build newrelic
 
 down:
 	docker-compose down
