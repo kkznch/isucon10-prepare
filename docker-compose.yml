@@ -1,7 +1,12 @@
 version: '3.8'
 services:
   app:
-    build: ./docker/php-fpm
+    build:
+      dockerfile: ./docker/php-fpm
+      args:
+        - NEW_RELIC_AGENT_VERSION=${NEW_RELIC_AGENT_VERSION}
+        - NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY}
+        - NEW_RELIC_APPNAME=ISUCON
     environment:
       - MYSQL_HOST=db
     depends_on:
