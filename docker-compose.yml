@@ -6,7 +6,7 @@ services:
       args:
         - NEW_RELIC_AGENT_VERSION=${NEW_RELIC_AGENT_VERSION}
         - NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY}
-        - NEW_RELIC_APPNAME=${NEW_RELIC_APPNAME:isucon}
+        - NEW_RELIC_APPNAME=${NEW_RELIC_APPNAME:-isucon}
     environment:
       - MYSQL_HOST=db
     depends_on:
