@@ -17,5 +17,5 @@ RUN curl -L https://download.newrelic.com/php_agent/archive/${NEW_RELIC_AGENT_VE
 RUN sed -i -e "s/REPLACE_WITH_REAL_KEY/${NEW_RELIC_LICENSE_KEY}/" \
     -e "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${NEW_RELIC_APPNAME}\"/" \
     -e '$anewrelic.distributed_tracing_enabled=true' \
-    -e '$anewrelic.daemon.address="newrelic-php-daemon:31339"' \
+    -e '$anewrelic.daemon.address="newrelic:31339"' \
     $(php -r "echo(PHP_CONFIG_FILE_SCAN_DIR);")/newrelic.ini
