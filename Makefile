@@ -5,4 +5,4 @@ down:
 	docker-compose down
 
 bench:
-	docker-compose up bench
+	docker-compose run bench
